@@ -14,3 +14,21 @@ h = DSLHash.build do
 end
 
 puts h
+
+h = DSLHash.build do
+  inner do
+    subinner do
+      subsubinner do
+        hello "World"
+      end
+    end
+  end
+
+  who_am_i "None", "of", "your", "business"
+end
+
+puts h
+
+clusterduck = DSLHash.build { a 1 and b 2 and c 3 }
+
+puts clusterduck
